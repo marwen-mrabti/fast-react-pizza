@@ -5,7 +5,7 @@ type ButtonProps = {
   children: React.ReactNode;
   disabled?: boolean;
   classes?: string;
-  onClickHandler?: () => void;
+  onClickHandler?: (e?: any) => void;
 };
 
 const Button = ({ children, disabled, classes, onClickHandler }: ButtonProps) => {
