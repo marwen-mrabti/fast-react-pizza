@@ -8,9 +8,13 @@ const AppLayout = () => {
   const isLoading = navigation.state === "loading";
 
   return (
-    <div className="layout">
+    <div className="h-screen w-screen grid grid-col-1 grid-rows-[auto_1fr_auto] ">
       <Header />
-      <main>{isLoading ? <Loader /> : <Outlet />}</main>
+
+      <div className="overflow-scroll">
+        <main className="max-w-3xl mx-auto">{isLoading ? <Loader /> : <Outlet />}</main>
+      </div>
+
       <CartOverview />
     </div>
   );

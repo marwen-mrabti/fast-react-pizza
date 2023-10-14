@@ -6,7 +6,7 @@ function getPosition() {
 
 async function fetchAddress() {
   // 1) We get the user's geolocation position
-  const positionObj = await getPosition();
+  const positionObj = await getPosition() as any;
   const position = {
     latitude: positionObj.coords.latitude,
     longitude: positionObj.coords.longitude,
